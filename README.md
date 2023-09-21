@@ -31,7 +31,8 @@ This bash script is located here: [./bin/install_terraform_cli](./bin/install_te
 - This will allow us an easier debug
 - Better portability
 
-[]
+### Add Project env
+sent to secrets using `gp env PROJECT_ROOT=/workspace/terraform-beginner-bootcamp-2023`
 
 https://en.wikipedia.org/wiki/Shebang_(Unix)
 https://en.wikipedia.org/wiki/Chmod
