@@ -31,8 +31,21 @@ This bash script is located here: [./bin/install_terraform_cli](./bin/install_te
 - This will allow us an easier debug
 - Better portability
 
-[]
+### AWS CLI Installation
 
+AWS CLI is installed for the project via the bash script [`./bin/install_aws_cli`](./bin/install_aws_cli)
+
+[Getting started install](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+[AWS CLI Env Vars](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+We can check if our AWS credentials are configured correctly by running the following CLI command
+```sh
+aws sts get-caller-identity
+```
+
+
+
+### REFERENCES
 https://en.wikipedia.org/wiki/Shebang_(Unix)
 https://en.wikipedia.org/wiki/Chmod
 https://www.gitpod.io/docs/configure/workspaces/tasks
