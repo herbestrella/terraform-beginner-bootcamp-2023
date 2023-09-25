@@ -42,6 +42,18 @@ We can check if our AWS credentials are configured correctly by running the foll
 ```sh
 aws sts get-caller-identity
 ```
+<<<<<<< HEAD
+If it is successful you should see a json payload return that looks like this
+
+```json
+{
+    "UserId": "AIDAUQMDDFPYTAAMFN3RH",
+    "Account": "123456789012",
+    "Arn": "arn:aws:iam::310049450993:user/terraform-beginner-bootcamp"
+}
+```
+=======
+>>>>>>> main
 
 
 
