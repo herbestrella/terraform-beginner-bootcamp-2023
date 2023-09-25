@@ -55,7 +55,7 @@ If it is successful you should see a json payload return that looks like this
 =======
 >>>>>>> main
 
-
+env | grep AWS_
 
 ### REFERENCES
 https://en.wikipedia.org/wiki/Shebang_(Unix)
