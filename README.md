@@ -49,3 +49,57 @@ env | grep AWS_
 https://en.wikipedia.org/wiki/Shebang_(Unix)
 https://en.wikipedia.org/wiki/Chmod
 https://www.gitpod.io/docs/configure/workspaces/tasks
+
+## Terraform Basics
+
+### Terraform Registry
+
+Terraform sources their providers and modules from the Terraform registry which located at [registry.terraform.io](https://registry.terraform.io/)
+
+- **Providers** is an interface to APIs that will allow to create resources in Terraform
+- **Modules** are a way to make large amounts of terraform code modular, portable, shareable.
+- **Providers** make terraform modular
+
+### Terraform Console
+
+We can see a list of all the Terraform commands by simply typing `terraform`
+
+#### Terraform Init
+
+At the start of a new terraform project we will run `terraform init` to download the binaries for the terraform providers that we'll use in this project.
+
+
+#### Terraform Plan
+
+`terraform plan`
+
+This will generate out changeset, about the state of our infra and what will be changed
+
+We can output this change set ie. "Plan" to be passed to an apply, but often you can just ignore outputting.
+
+#### Terraform Apply
+
+`terraform apply`
+
+This will run a plan and pass the changeset to be executed by terraform. Apply should prompt yes or no, if you want to automatically approve use auto approve flag ie. `terraform apply --auto-approve`
+
+### Terrafrom Lock Files
+
+`.terraform.locl.hcl` contains the locked versioning for the providers or modules that should be used with this project
+
+The terraform Lock File should be committed to you Version Control System (VSC) eg. Github
+
+### Terraform State Files
+`.terraform.tfstate` contains infomrmation about the current state of your infrastructure.
+
+This file **should not be committed** to your VCS.
+
+This file can contain sensitive data.
+
+If you lose this file, you lose knowning the state of your infrastrucutre.
+
+`.terraform.tfstate.backup` is the pervious state file state
+
+### Terraform Directory
+
+`.terraform` director contains binaries of terraform providers
