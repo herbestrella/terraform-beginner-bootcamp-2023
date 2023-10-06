@@ -18,3 +18,23 @@ variable "bucket_name" {
     error_message = "The bucket_name must be between 3 and 63 characters, and follow the AWS naming conventions for S3 buckets (start and end with lowercase letter or number, can contain only lowercase letters, numbers, hyphens, and periods, and not formatted as IP addresses)."
   }
 }
+
+variable "index_html_filepath" {
+  description = "The file path for index.html"
+  type        = string
+
+  validation {
+    condition     = fileexists(var.index_html_filepath)
+    error_message = "The provided p[ath for index.html does not exist."
+  }
+}
+
+variable "error_html_filepath" {
+  description = "The file path for error.html"
+  type        = string
+
+  validation {
+    condition     = fileexists(var.error_html_filepath)
+    error_message = "The provided p[ath for error.html does not exist."
+  }
+}
